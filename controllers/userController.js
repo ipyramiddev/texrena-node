@@ -1,4 +1,9 @@
 
+// Get all user
+exports.getAllUser = (req, res) => {
+    console.log('getAlluser');
+};
+
 // Get user
 exports.getUser = (req, res) => {
     console.log('getuser');

@@ -4,6 +4,15 @@ const express = require("express");
 const router = express.Router();
 const usersController = require("../controllers/userController");
 
+// Retrieve all user details
+/**
+*@desc Get all user details
+*@route /api/users/
+*@method GET
+*/
+router.get("/", usersController.getAllUser);
+
+
 // Retrieve user details
 /**
 *@desc Get user details
@@ -11,6 +20,7 @@ const usersController = require("../controllers/userController");
 *@method GET
 */
 router.get("/:id", usersController.getUser);
+
 // Update user
 /**
 *@desc Update user

@@ -2,6 +2,16 @@ const express = require("express");
 const router = express.Router();
 const accountController = require("../controllers/accountsController");
 
+
+
+// Retrieve all account details
+/**
+* @desc   Get all account details
+* @route  /api/accounts/
+* @method GET
+*/
+router.get('/', accountController.getAllAccount);
+
 // Retrieve account details
 /**
 * @desc   Get account details
