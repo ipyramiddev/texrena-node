@@ -1,3 +1,5 @@
+const oneDay = 1000*60*60*24;
+
 exports.getCurrentDate = () => {
   const currentDate = new Date();
 
@@ -5,10 +7,9 @@ exports.getCurrentDate = () => {
 }
 
 exports.getYesterdayDate = () => {
-  const oneDay = 1000*60*60*24;
-  const currentDate = new Date(Date.now()-oneDay);
+  const yesterday = new Date(Date.now()-oneDay);
   
-  return currentDate;
+  return yesterday;
 }
 
 exports.formatDateToIsoString = date => {
