@@ -1,9 +1,10 @@
 
 require("dotenv").config();
 
+//Database Connection URI
 module.exports = {
 
-    mongoConn: async () => {
+    mongoConnection: async () => {
         return mongoURI ="mongodb://${process.env.DB_PORT}/${process.env.DB_NAME}"
 
     }

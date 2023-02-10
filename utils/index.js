@@ -1,8 +1,8 @@
 //Importing Modules
-const mongoConn = require('./utility-functions').mongoConn
+const mongoConnection = require('./connection').mongoConnection
 
 
 //Exporting Modules
 module.exports = {
-    mongoConn
+    mongoConnection
 };

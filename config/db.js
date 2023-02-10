@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 
 // DB Configuration
-const db = require("../utils/index").mongoConn;
+const db = require('../utils/connection').mongoConnection
 
 
 //Connect to Mongodb URI
