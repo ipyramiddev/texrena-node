@@ -1,15 +1,8 @@
-/*
-    This file is to be used only for gathering exports
+//Importing Modules
+const mongoConn = require('./utility-functions').mongoConn
 
-    ex:
 
-    const fetchData = require('./utility-functions').fetchData;
-    const validateInput = require('./utility-functions').validateInput;
-    const formatDate = require('./utility-functions').formatDate;
-
-    module.exports = {
-        fetchData,
-        validateInput,
-        formatDate
-    };
-*/
+//Exporting Modules
+module.exports = {
+    mongoConn
+};
