@@ -74,7 +74,7 @@ const handleError = (error) => {
   const errorMessage = error.response ? handleErrorCode(error.response.status) : error.message;
 
   // For debug
-  console.log(`Error: ${errorMessage});
+  console.log(`Error: ${errorMessage}`);
 
   return {
     success: false,
@@ -139,6 +139,4 @@ module.exports = {
   callApi,
   createApiUrl,
   createApiOptions,
-  handleResponse,
-  parseResponse,
 }

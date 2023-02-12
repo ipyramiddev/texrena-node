@@ -1,7 +1,7 @@
 const dates = require('./dates')
-const externalAPICalls = require('./externalAPICalls')
+const useApi = require('./api')
 
 module.exports = {
     dates,
-    externalAPICalls
+    useApi
 };
