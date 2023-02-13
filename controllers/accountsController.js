@@ -1,5 +1,12 @@
 const { useApi } = require('../utils/index')
 
+/**
+* @desc   Function that returns accounts from API
+* @param   req   url       request object
+* @param   res   options   response object
+* @return                     accounts from server
+*/
+
 exports.getAllAccount = async (req, res) => {
     try {
         const baseUrl = 'https://dev.mycadenzacloud.com/Thingworx/Things/CDZ.Core.AccountsAPI.Thing/Services';
@@ -26,13 +33,6 @@ exports.getAllAccount = async (req, res) => {
         res.status(500).json({ message: "Error getting account details" });
     }
 };
-
-/**
-* @desc   Function that returns account from API
-* @param   req   url       request object
-* @param   res   options   response object
-* @return                     account from server
-*/
 
 exports.getAccount = async (req, res) => {
     try {
