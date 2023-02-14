@@ -6,34 +6,52 @@ const oneDay = 1000*60*60*24;
 * @return             current date
 */
 
-exports.getCurrentDate = () => {
+const getCurrentDate = () => {
   const currentDate = new Date();
 
   return currentDate;
 }
 
 /**
-* @desc   Function that returns a yesterday date
-* @param     -
+* @desc     Function that returns a yesterday date
+* @param    none
 * @return             yesterday date
 */
 
-exports.getYesterdayDate = () => {
-  const currentDate = this.getCurrentDate()
+const getYesterdayDate = () => {
+  const currentDate = getCurrentDate()
   const dayBefore = new Date(currentDate-oneDay);
 
   return dayBefore;
 }
 
 /**
-* @desc   Function that returns a date in isoString format
-* @param     date     any date
-* @return             date in isoString format
+* @desc     Function that returns a date in isoString format
+* @param    date     any date
+* @return            date in isoString format
 */
 
-
-exports.formatDateToIsoString = date => {
+const formatDateToIsoString = date => {
   const dateToIsoString = new Date(date).toISOString() 
   
   return dateToIsoString;
+}
+
+/**
+* @desc      Function that returns a date in isoString format
+* @param     mins     any date
+* @return             date-time from now
+*/
+
+const minutesFromNow = (minutes) => {
+    const now = getCurrentDate();
+    now.setMinutes(now.getMinutes() + minutes);
+    return now;
+}
+
+module.exports = {
+  getCurrentDate,
+  getYesterdayDate,
+  formatDateToIsoString,
+  minutesFromNow,
 }
