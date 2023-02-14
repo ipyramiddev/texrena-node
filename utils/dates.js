@@ -1,5 +1,3 @@
-const oneDay = 1000*60*60*24;
-
 /**
 * @desc   Function that returns a current date
 * @param     -
@@ -19,7 +17,8 @@ const getCurrentDate = () => {
 */
 
 const getYesterdayDate = () => {
-  const currentDate = getCurrentDate()
+  const currentDate = getCurrentDate();
+  const oneDay = 1000*60*60*24;
   const dayBefore = new Date(currentDate-oneDay);
 
   return dayBefore;
