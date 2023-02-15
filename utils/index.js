@@ -1,8 +1,11 @@
-//Importing Modules
-const mongoConnection = require('./connection').mongoConnection
+const dates = require('./dates');
+const useApi = require('./api');
+const encrpyption = require('./encryption');
+const formatting = require('./formatting');
 
-
-//Exporting Modules
 module.exports = {
-    mongoConnection
+    dates,
+    useApi,
+    encrpyption,
+    formatting,
 };
