@@ -30,3 +30,7 @@ router.get("/verify", authenticationController.verify);
 router.post("/logout", authenticationController.logout);
 
 module.exports = router;
+
+
+
+// techlabz-3
