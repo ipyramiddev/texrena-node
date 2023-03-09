@@ -1,5 +1,7 @@
 // Imports
+require("dotenv").config();
 const express = require('express');
+const bodyParser = require("body-parser")
 const accountsRoute = require("./routes/accounts");
 const usersRoute = require("./routes/users");
 const authenticationRoute = require("./routes/authentication");
@@ -12,6 +14,8 @@ const PORT = process.env.PORT || 5000;
 const app = express();
 
 // Middleware
+app.use(bodyParser.urlencoded({ extended: "false" }));
+app.use(bodyParser.json());
 
 // Routing
 app.use("/api/accounts", accountsRoute);

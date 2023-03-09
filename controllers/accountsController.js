@@ -14,9 +14,9 @@ exports.getAllAccount = async (req, res) => {
         const queryParams = req.query;
 
         const url = useApi.createApiUrl(baseUrl, endpoint, queryParams);
-        
+
         const options = {
-            headers: { 
+            headers: {
                 'apiKey': apiKey
             }
         };
